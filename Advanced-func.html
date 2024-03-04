@@ -1,0 +1,72 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>Advanced functions</title>
+    </head>
+    <body>
+
+        <script>
+            /*
+            //declaring an anonymous function
+            //
+         const func= function(){ // greeting();
+             //functions are values- can be saved in an object
+            console.log('hello')
+          }  
+          //greeting();
+          console.log(typeof func);
+          func();
+
+          const obj1 = {
+            num: 2, 
+            fun: function(){
+                console.log('hello world');
+            }
+          };
+
+          obj1.fun();
+
+          //passing a value into a function- we can pass a 
+          //function into a function too
+          function display(param){
+            console.log(param);
+          }
+          display(20);
+
+          function run(param){
+            param();
+          }
+          run(function(){ //this is called a callback function
+            console.log('HELLO WORLD');
+          });
+          */
+          /*Asynchronous code-won't wait for line to finish before 
+          going to the next line.
+          Synchronous code- will wait for one line to finish 
+          */
+          
+          /*
+          setTimeout(function(){
+            console.log('TimeOut');
+          }, 3000);
+
+          console.log('Next line');
+
+          setInterval(function(){
+            console.log('Interval');
+          }, 3000 );
+          console.log('Hey');
+          */
+
+          //loop through an array
+          [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value, index){
+            console.log(value);
+            console.log(index)
+        })
+        </script>
+    </body>
+</html>

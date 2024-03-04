@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise</title>
+    <style>
+        .addBtn {
+            background-color: rgb(255, 216, 20);
+            border-radius: 50px;
+            color: black;
+            border: none;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .request {
+            background-color: black;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            padding: 20px 15ppx;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .schedule {
+            background-color: gray;
+            border-radius: 25px;
+            color: black;
+            border: none;
+            padding: 20px 15ppx;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .is-gaming {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .js-btn {
+        background-color: black;
+        color: white;
+      }
+    </style>
+</head>
+
+<body>
+    <button class="addBtn">Add to cart</button>
+    <button class="request">Request Now</button>
+    <button class="schedule">Schedule for later</button>
+
+    <button class="js-btn" >Test</button>
+
+    <button class="is-gaming js-button" onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-gaming')) {
+        button.classList.add('is-gaming');
+      } else {
+        button.classList.remove('is-gaming');
+      }">Gaming</button>
+</body>
+<script>
+    const btn = document.querySelector('.js-button');
+    console.log(btn.classList.contains('js-button'));
+  </script>
+</html>

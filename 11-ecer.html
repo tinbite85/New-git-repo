@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays and Loops</title>
+</head>
+
+<body>
+    <p>pink</p>
+    <script>
+        /*
+        const num = [10, 20, 30];
+        num[2] = 99;
+        console.log(num);
+
+        function getLastValue() {
+            const arr = [1, 2, 3, 4, 5];
+            let result = arr[4];
+            console.log(result);
+
+            const lastIndex = [5];
+
+            const lastValue = num[lastIndex];
+            const firstValue = num[0];
+
+            num[0] = lastValue;
+            num[lastIndex] = firstValue;
+
+            return num;
+        }
+        getLastValue();
+
+        let numberDoubled = '';
+        for(let i=0; i<=10; i +=2){
+            console.log(i);
+        }
+        
+        for(let i=5; i>=0; i--){
+            console.log(i);
+        }
+*/
+        function doubleArray(nums) {
+            const numsDoubled = [];
+
+            for (let i = 0; i < nums.length; i++) {  
+                const num = nums[i];
+                numsDoubled.push(num * 2);
+            }
+            return numsDoubled;
+        }
+        console.log(doubleArray([1, 2, 3])); 
+
+
+    </script>
+</body>
+
+</html>

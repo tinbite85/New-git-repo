@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+    <link rel="stylesheet" href="Styles/12-adv-func.css">
+</head>
+
+<body>
+    <h4>
+        <p class="title">Rock Paper Scissor</p>
+    </h4>
+
+    <button onclick="playGame('Rock')" class="move-btn"><img src="image/rock-emoji.png" class="icon"></button>
+
+    <button onclick="playGame('Paper')" class="move-btn"><img src="image/paper-emoji.png" class="icon"></button>
+
+    <button onclick="playGame('Scissor')" class="move-btn"><img src="image/scissors-emoji.png" class="icon"></button>
+
+    <br>
+    <button onclick="
+      score.wins= 0;
+      score.losses = 0;
+      score.tie = 0;
+      UpdateScoreEle();
+    " class="rescore-btn">Reset Score</button>
+    <button class="auto-play-btn" onclick="autoPlay();">Auto Play</button>
+
+    <p class="js-score" class="score"></p>
+    <p class="js-result" class="result"></p>
+    <p class="js-moves"></p>
+
+    <script src="Scripts/12-Adj-func.js"></script>
+</body>
+
+</html> 

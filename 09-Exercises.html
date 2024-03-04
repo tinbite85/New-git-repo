@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Excer</title>
+</head>
+
+<body>
+    <button>9a</button>
+    <button class="btn-change">9b</button>
+
+    <button onclick="document.querySelector('.choice').innerHTML= 
+        'Your choice is: heads';">heads</button>
+    <button onclick="document.querySelector('.choice').innerHTML=
+        'Your choice is: Tails';">tails</button>
+    <p class="choice">Your choice is:</p>
+
+    <input placeholder="Enter your Name" class="NameDisplay" onkeydown="ValueEntered(event)" >
+    <button onclick="displayName();">Submit</button>
+    <p class="message"></p>
+    <script>
+        function displayName() {
+            let getNameTxt = document.querySelector('.NameDisplay');
+            document.querySelector('.message').innerHTML =
+             `Hello ${getNameTxt.value}`;
+        } 
+        function ValueEntered(event) {
+      //console.log(event.key); read the key touched 
+      if (event.key === 'Enter') 
+        {
+            displayName();
+        }
+    }
+    </script>
+</body>
+
+</html>

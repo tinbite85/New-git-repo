@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A&L</title>
+</head>
+
+<body>
+    <p>Lesson</p>
+
+
+    <script>
+        let word = [];
+        let Index = '';
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] === 'hello') {
+                Index = i;
+                break;
+            }
+        }
+        console.log(Index);
+
+        word = ['not', 'found'];
+        Index = '';
+
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] === 'hey') {
+                Index = i;
+            }
+            else {
+                console.log('not found');
+            }
+        }
+
+        function removeEgg(foods){
+            const result = [];
+            const reversedFoods = foods.reverse();
+             const FoodCopy = foods.slice();
+            for(let i= 0; i<foods.length; i++)
+            {
+                if(foods[i] === 'eggs'){
+                    continue;
+                }
+                result.push(foods[i]);
+            }
+            return result;
+        }
+        console.log(removeEgg(['eggs', 'apple', 'eggs','ham', 'bread']));
+
+
+        for (let i = 0; i <= 20; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log('FuzzBuzz');
+            }
+            else if (i % 3 === 0) {
+                console.log('Fuzz');
+                
+            }
+
+            else if (i % 5 === 0) {
+                console.log('Buzz');
+            }
+            else{
+                console.log(i);}
+        }
+        const av = ['m', 'j', 'sd', 'rr', 'tr']
+        let count = 0
+        av.forEach((a) => {
+            console.log(a);
+            console.log(count);
+            count += 1
+        })
+    </script>
+</body>
+
+</html>

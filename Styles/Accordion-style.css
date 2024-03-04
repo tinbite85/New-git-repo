@@ -1,0 +1,48 @@
+ .body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bedfe8;
+ }
+ .accordion{
+    max-width: 800px;
+ }
+ .accordion .content{
+  position: relative;
+  margin: 10px 20px;
+ }
+ .accordion .content .label{
+  position: relative;
+  padding: 10px;
+  background: #2694af;
+  color: #fff;
+  cursor: pointer;
+ }
+
+ .accordion .content .label::before{
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%);
+  font-size: 1.5em;
+ }
+
+ .accordion .content.active .label::before{
+   content: '-';
+ }
+
+ .accordion .content .list{
+  position: relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+ }
+
+ .accordion .content.active .list{
+   height: 150px;
+   padding: 10px;
+ }

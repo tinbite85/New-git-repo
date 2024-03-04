@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Style</title>
+</head>
+<style>
+  .subs-btn {
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-family: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .is-Subscribed {
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+
+  body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .cost-Input{
+    font-size: 15px;
+    padding: 10px;
+  }
+  .calculate-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 13px 20px;
+    cursor: pointer; 
+  }
+</style>
+
+<body>
+  <h3>
+    <p><b>YouTube Subscribe Button</b></p>
+  </h3>
+
+  <button onclick="Subscribe()" class="subscribe-btn subs-btn">Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+
+  <input placeholder="Cost of Order" class="js-costInput cost-Input" onkeydown="costKeydown(event);">
+
+  <button onclick="calculateTotal();" class="calculate-btn">Calculate</button>
+  <p class="js-total"></p>
+
+  <script>
+
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-costInput');
+      let cost = Number(inputElement.value);
+
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector('.js-total').innerHTML = `$${cost}`;
+    }
+
+
+    function Subscribe() {
+      const btnElement = document.querySelector('.subscribe-btn');
+
+      if (btnElement.innerText === 'Subscribe') {
+        btnElement.innerHTML = 'Subscribed';
+        btnElement.classList.add('is-Subscribed');
+      }
+      else {
+        btnElement.innerHTML = 'Subscribe';
+        btnElement.classList.remove('is-Subscribed');
+      }
+    }
+
+    function costKeydown(event) {
+      //console.log(event.key); read the key touched 
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+  </script>
+</body>
+
+</html>
