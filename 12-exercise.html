@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>advanced array</title>
+</head>
+
+<body>
+    <p>hi</p>
+    <button class="js-btn" onclick="startBtn();">start</button>
+    <button class="js-cart" onclick="addToCart();">Add to Cart</button>
+
+    <p class="js-message"></p>
+
+    <button onclick="message++;">Add</button>
+    <button onclick="message--;">Remove</button>
+    <script>
+       /* const add= function(){
+            console.log(2+3);
+        };
+
+        add();
+        add();
+
+    function runTwice(fun) {
+        fun();
+        fun();
+    }
+
+    runTwice(function() {
+        console.log('olla');
+    });
+
+    runTwice(add);
+
+    function startBtn() {
+        const btn= document.querySelector('.js-btn');
+
+        btn.innerHTML = 'loading....';
+        setTimeout(function() {
+            btn.innerHTML='Done';
+        }, 1000);
+    }*/
+
+    /*
+    let timeoutID;
+    function addToCart() {
+       
+
+        const cart = document.querySelector('.js-message');
+        cart.innerHTML = 'Added';
+
+        clearTimeout(timeoutID);
+        
+        timeoutID= setTimeout(function() {
+            cart.innerHTML='';
+        }, 2000);
+
+    }
+    */
+
+    let message = 2;
+    setInterval(function() {
+        if(document.title === 'advanced array'&& message> 0){
+            document.title = `(${message})new message`;
+        }
+        else{
+            document.title = 'advanced array'
+        }
+    }, 2000); 
+
+
+    </script>
+</body>
+
+</html>

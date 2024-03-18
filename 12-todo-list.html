@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays and Loops TD</title>
+    <link rel="stylesheet" href="Styles/12-todo-list.css">
+</head>
+
+<body>
+    <p>Todo list</p>
+    <div class="todo-input-grid">
+        <input placeholder="To do name" class="name-input name-field">
+        <input type="date" class="date-input date-field">
+        <button onkeydown="Enterbtn();" 
+            class="add-todo-btn add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+    <script src="Scripts/12-ToDo.js">
+        const todoList = ['hello', 'Name', 'Adress'];
+
+        for (let i = 0; i < todoList.length - 1; i++) {
+            const value = todoList[i];
+            console.log(value);
+        }
+    </script>
+</body>
+
+</html>
